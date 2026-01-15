@@ -1,0 +1,14 @@
+body{
+  background-color:rgb(41, 110, 213);
+  color:white;
+  padding:1vh;
+  margin:2vh;
+  font-family:arial;
+  font-style:italic;
+  text-shadow:2px 2px 2px blue;
+  padding:10vh;
+}
+*{
+  padding:0;
+  margin:0;
+}

@@ -1,0 +1,87 @@
+
+#reset{
+  padding:10px;
+  background-color:red;
+  color:white;
+  font-weight:bold;
+  font-size:15px;
+  border-radius:5px;
+  border:none;
+  cursor:pointer;
+}
+#reset:hover{
+  font-size:14px;
+  background-color:rgb(135, 24, 24);
+}
+#reset:active{
+  font-size:16px;
+  opacity:0.67;
+}
+.image-container{
+  display:flex;
+  justify-content: space-between;
+}
+.image-container button{
+  max-width:max-content;
+  border-radius:50%;
+  cursor:pointer;
+}
+.out-put{
+  font-family:Arail;
+  position:fixed;
+  display:flex;
+  top:0;
+  left:10px;
+  right:1px;
+  z-index:1;
+  width:40vw;
+  color:black;
+  justify-content: space-between;
+  font-weight:bold;
+}
+.wins-screen{
+  background-color:green;
+  color:white;
+
+}
+.loses-screen{
+  background-color:red;
+  color:white;
+  
+}
+.ties-screen{
+  background-color:yellow;
+  color:blue;
+  text-shadow: none;
+}
+.total-screen{
+  background-color:blue;
+  color:white;
+  
+}
+.wins-screen,.loses-screen,.total-screen,.ties-screen{
+  padding: 10px;
+  border-radius:10px;
+  box-shadow:2px 2px 2px white;
+  border:solid 1px black;
+}
+.user-message{
+  position:absolute;
+  top:0;
+  z-index:2;
+  right:48vw;
+  color:red;
+}
+.image-container button:hover{
+  opacity:0.76;
+}
+.image-container button:active{
+  opacity:0.89;
+}
+
+img{
+  border:solid 5px white;
+  padding:40px;
+  width:50px;
+  border-radius:50%;
+}
