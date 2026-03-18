@@ -1,82 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rock Paper Scissors Game</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="game-css/game.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Design</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #222;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.5s, color 0.5s;
+        }
+        h1, h2 {
+            animation: fadeIn 1s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        /* Additional styles for premium design */
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <!-- Header -->
-    <header class="header">
-      <div class="header-content">
-        <h1>Rock Paper Scissors</h1>
-        <p class="subtitle">Test your luck and strategy</p>
-      </div>
-    </header>
-
-    <!-- Game Stats -->
-    <div class="game-stats">
-      <div class="stat-card">
-        <span class="stat-label">Your Score</span>
-        <span class="stat-value" id="playerScore">0</span>
-      </div>
-      <div class="stat-card">
-        <span class="stat-label">Computer Score</span>
-        <span class="stat-value" id="computerScore">0</span>
-      </div>
-      <div class="stat-card">
-        <span class="stat-label">Games Played</span>
-        <span class="stat-value" id="gamesPlayed">0</span>
-      </div>
+    <div class="container">
+        <h1>Welcome to the Enhanced Design</h1>
+        <h2>Featuring Animations and Dark Mode</h2>
+        <p>This page now includes much better UX.</p>
+        <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
     </div>
-
-    <!-- Result Display -->
-    <div class="result-container">
-      <div class="result-content">
-        <h2 class="result-text">Game Result</h2>
-        <div class="user-message" id="resultMessage"></div>
-        <div class="Result-screen" id="resultScreen"></div>
-      </div>
-    </div>
-
-    <!-- Game Choices -->
-    <div class="game-section">
-      <h3 class="section-title">Make Your Choice</h3>
-      <div class="image-container">
-        <button class="choice-button paper-button" data-choice="paper" title="Paper">
-          <img src="game-images/paper-emoji.png" alt="Paper">
-          <span>Paper</span>
-        </button>
-        <button class="choice-button rock-button" data-choice="rock" title="Rock">
-          <img src="game-images/rock-emoji.png" alt="Rock">
-          <span>Rock</span>
-        </button>
-        <button class="choice-button scissors-button" data-choice="scissors" title="Scissors">
-          <img src="game-images/scissors-emoji.png" alt="Scissors">
-          <span>Scissors</span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Control Buttons -->
-    <div class="controls">
-      <button class="btn btn-primary" id="reset">
-        <i class="fas fa-redo"></i> Reset Game
-      </button>
-      <button class="btn btn-secondary" id="stats">
-        <i class="fas fa-chart-bar"></i> Statistics
-      </button>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <p>&copy; 2026 Rock Paper Scissors Game. Built with ❤️</p>
-    </footer>
-  </div>
-
-  <script src="game-js/game.js"></script>
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
 </body>
 </html>
