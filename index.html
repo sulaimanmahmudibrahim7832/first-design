@@ -3,43 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rock-paper-scissors</title>
+  <title>Rock Paper Scissors Game</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="game-css/game.css">
-  <link rel="stylesheet" href="game-css/game-general.css">
-  <link rel="stylesheet" href="game-css/responsive.css">
-  <link rel="stylesheet" href="game-css/screen.css">
 </head>
 <body>
- <!-- <h4 class="Move">Moves =  0</h4>-->
-  <h2 class="result-text">Result:</h2>
-  <div class="user-message">
-   
-  </div>
-  <div class="Result-screen">
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <h1>Rock Paper Scissors</h1>
+        <p class="subtitle">Test your luck and strategy</p>
+      </div>
+    </header>
 
-  </div>
- <hr>
- <h4> select your choice below </h4>
- <hr>
-  <div class="image-container">
- <button class="paper-button">
-  <img src="game-images/paper-emoji.png">
-</button>
- <button class="rock-button">
-  <img src="game-images/rock-emoji.png">
-</button>
- <button class="scissors-button">
-  <img src="game-images/scissors-emoji.png">
-</button>
-  </div>
- 
- <button id="reset">
-  reset
- </button>
- <hr><hr>
- <script src="game-js/game.js">
-  
+    <!-- Game Stats -->
+    <div class="game-stats">
+      <div class="stat-card">
+        <span class="stat-label">Your Score</span>
+        <span class="stat-value" id="playerScore">0</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Computer Score</span>
+        <span class="stat-value" id="computerScore">0</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Games Played</span>
+        <span class="stat-value" id="gamesPlayed">0</span>
+      </div>
+    </div>
 
- </script>
+    <!-- Result Display -->
+    <div class="result-container">
+      <div class="result-content">
+        <h2 class="result-text">Game Result</h2>
+        <div class="user-message" id="resultMessage"></div>
+        <div class="Result-screen" id="resultScreen"></div>
+      </div>
+    </div>
+
+    <!-- Game Choices -->
+    <div class="game-section">
+      <h3 class="section-title">Make Your Choice</h3>
+      <div class="image-container">
+        <button class="choice-button paper-button" data-choice="paper" title="Paper">
+          <img src="game-images/paper-emoji.png" alt="Paper">
+          <span>Paper</span>
+        </button>
+        <button class="choice-button rock-button" data-choice="rock" title="Rock">
+          <img src="game-images/rock-emoji.png" alt="Rock">
+          <span>Rock</span>
+        </button>
+        <button class="choice-button scissors-button" data-choice="scissors" title="Scissors">
+          <img src="game-images/scissors-emoji.png" alt="Scissors">
+          <span>Scissors</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Control Buttons -->
+    <div class="controls">
+      <button class="btn btn-primary" id="reset">
+        <i class="fas fa-redo"></i> Reset Game
+      </button>
+      <button class="btn btn-secondary" id="stats">
+        <i class="fas fa-chart-bar"></i> Statistics
+      </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2026 Rock Paper Scissors Game. Built with ❤️</p>
+    </footer>
+  </div>
+
+  <script src="game-js/game.js"></script>
 </body>
 </html>
